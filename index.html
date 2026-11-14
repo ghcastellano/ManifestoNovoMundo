@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifesto Novo Mundo — Do Ter ao Ser, do Isolamento à Conexão</title>
+  <meta
+    name="description"
+    content="Um manifesto aberto pela reconexão humana. Entenda o ciclo do desejo, explore evidências científicas sobre felicidade, descubra ideias práticas de colaboração sem dinheiro e assine o pacto."
+  />
+  <meta property="og:title" content="Manifesto Novo Mundo — Do Ter ao Ser" />
+  <meta
+    property="og:description"
+    content="A falta é a única constante quando vivemos apenas para desejar. A verdadeira alegria está na conexão, no contentamento e na doação."
+  />
+  <meta property="og:type" content="website" />
+
+  <!-- Editorial & Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fixed 3D WebGL/Canvas Universe that morphs on scroll -->
+  <canvas id="world-canvas" aria-hidden="true"></canvas>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Minimal Floating Navigation -->
+  <header class="site-header" id="site-header">
+    <a href="#hero" class="brand" aria-label="Início - Manifesto Novo Mundo">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Manifesto Novo Mundo</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#manifesto" class="nav-link">Manifesto</a>
+      <a href="#reflexoes" class="nav-link">Pare para Pensar</a>
+      <a href="#nucleo" class="nav-link">Núcleo</a>
+      <a href="#ciencia" class="nav-link">Ciência</a>
+      <a href="#movimento" class="nav-link">Movimento</a>
+      <a href="#assinar" class="nav-cta">Assinar Pacto</a>
+    </nav>
+
+    <button
+      class="mobile-menu-btn"
+      id="mobile-menu-btn"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav class="mobile-nav">
+      <a href="#manifesto" class="mobile-nav-link">O Manifesto</a>
+      <a href="#reflexoes" class="mobile-nav-link">Pare para Pensar</a>
+      <a href="#nucleo" class="mobile-nav-link">Núcleo da Felicidade</a>
+      <a href="#ciencia" class="mobile-nav-link">Base Científica</a>
+      <a href="#movimento" class="mobile-nav-link">Ideias &amp; Grupos</a>
+      <a href="#assinar" class="mobile-nav-link highlight">Assinar o Manifesto</a>
+    </nav>
+  </div>
+
+  <!-- Scroll Progress Rail -->
+  <aside class="chapter-rail" aria-label="Progresso da leitura">
+    <div class="rail-track">
+      <div class="rail-fill" id="rail-fill"></div>
+    </div>
+    <span class="rail-label" id="rail-label">01 · O Ciclo</span>
+  </aside>
+
+  <main id="main-content">
+    <!-- CHAPTER 0: HERO -->
+    <section id="hero" class="section hero-section" data-chapter="0" data-label="01 · O Ciclo">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Um chamado à presença e à vida compartilhada</p>
+        <h1 class="hero-title reveal">
+          Estamos presos no desejo.<br />
+          <em>Mas o que buscamos é conexão.</em>
+        </h1>
+        <p class="hero-subtitle reveal">
+          Cada conquista externa promete realização, mas o contentamento dura apenas segundos.
+          Logo surge uma nova falta. Enquanto corremos sozinhos atrás do próximo objeto,
+          esquecemos que somos criaturas sociais — feitas para brincar, escutar, dividir a mesa e pertencer.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#manifesto" class="btn btn-primary">Ler o Manifesto</a>
+          <a href="#assinar" class="btn btn-ghost">Assinar &amp; Agir</a>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Role para transformar a cena</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 1: O MANIFESTO ELABORADO -->
+    <section id="manifesto" class="section manifesto-section" data-chapter="1" data-label="02 · Manifesto">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="chapter-num">Capítulo I</span>
+          <h2 class="section-title">O Manifesto do Novo Mundo</h2>
+          <p class="section-lead">
+            Seis verdades simples que a pressa moderna nos fez esquecer — e que a ciência e a nossa própria infância confirmam.
+          </p>
+        </div>
+
+        <div class="manifesto-grid">
+          <article class="manifesto-act reveal" data-act="1">
+            <span class="act-index">01</span>
+            <h3>A Armadilha do Desejo Infinito</h3>
+            <p>
+              Fomos ensinados a buscar satisfação interior em algo externo. O próximo celular, o próximo carro, o próximo cargo.
+              Quando finalmente alcançamos, o alívio dura segundos. Imediatamente, um novo desejo nasce — e com ele, uma nova frustração.
+              Nesse ciclo, <strong>a falta é a única constante</strong>.
+            </p>
+          </article>
+
+          <article class="manifesto-act reveal" data-act="2">
+            <span class="act-index">02</span>
+            <h3>O Excesso do Ter Faz Faltar o Ser</h3>
+            <p>
+              O minimalismo costuma ser tratado como inimigo do progresso. O estímulo ao consumo sustenta a engrenagem econômica,
+              mas nos esvazia por dentro. Contentamento é a única forma real de nos sentirmos realizados.
+              No fim das contas, só queremos estar com pessoas, ser aceitos, ter alguém que nos escute com atenção e crie laços reais.
+            </p>
+          </article>
+
+          <article class="manifesto-act reveal" data-act="3">
+            <span class="act-index">03</span>
+            <h3>O Espelho da Infância</h3>
+            <p>
+              Pais e mães trabalham exaustivamente acreditando que oferecem o melhor quando compram o melhor telefone,
+              o melhor carro, a melhor escola. Mas o que as crianças realmente querem não cabe em uma vitrine:
+              elas querem <strong>atenção, brincar no chão, conversar sem pressa e se sentirem entendidas</strong>.
+            </p>
+          </article>
+
+          <article class="manifesto-act reveal" data-act="4">
+            <span class="act-index">04</span>
+            <h3>A Ilusão do Individualismo como Evolução</h3>
+            <p>
+              Medimos nossa evolução pelo patrimônio individual: se compramos um apartamento, estamos crescendo;
+              se não conseguimos pagar, estamos "desevoluindo". Mas o que é sucesso: ser feliz ou acumular mais?
+              Perdemos a espontaneidade de brincar como crianças e conversar sem fim — sem comparações de posse, religião ou gênero.
+            </p>
+          </article>
+
+          <article class="manifesto-act reveal" data-act="5">
+            <span class="act-index">05</span>
+            <h3>Regras Rígidas que Ninguém Assinou</h3>
+            <p>
+              Quem convencionou que devemos comer sozinhos, viajar em carros separados para o mesmo destino e sentir vergonha
+              de falar com o vizinho? A sociedade normalizou o isolamento total a ponto de preferirmos jogar comida fora
+              a compartilhá-la em uma mesa aberta.
+            </p>
+          </article>
+
+          <article class="manifesto-act reveal" data-act="6">
+            <span class="act-index">06</span>
+            <h3>A Verdadeira Alegria Está na Doação</h3>
+            <p>
+              Não há nada mais libertador e feliz do que a doação — seja de tempo, esforço, escuta, alimento ou qualquer outra medida
+              criada pelo ser humano. Quando tiramos o foco do nosso próprio vazio e nos tornamos abrigo para o outro,
+              o ciclo da falta finalmente se rompe.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: PARE PARA PENSAR -->
+    <section id="reflexoes" class="section reflexoes-section" data-chapter="2" data-label="03 · Reflexões">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="chapter-num">Capítulo II</span>
+          <h2 class="section-title">Pare para pensar</h2>
+          <p class="section-lead">
+            Toque em cada cenário abaixo para contrastar o roteiro automático que aceitamos com a vida espontânea que ainda podemos escolher.
+          </p>
+        </div>
+
+        <div class="contrast-list" id="contrast-list">
+          <!-- Populated & interactive via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: O NÚCLEO DA FELICIDADE -->
+    <section id="nucleo" class="section nucleo-section" data-chapter="3" data-label="04 · O Núcleo">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="chapter-num">Capítulo III</span>
+          <h2 class="section-title">O Núcleo da Felicidade</h2>
+          <p class="section-lead">
+            Quatro pilares sustentam a plenitude humana. Clique em cada um para explorar como nossa rotina os drena — e como resgatá-los hoje.
+          </p>
+        </div>
+
+        <div class="pillars-layout">
+          <div class="pillars-selector" role="tablist" aria-label="Pilares da felicidade">
+            <button class="pillar-tab active" role="tab" aria-selected="true" data-pillar="0">
+              <span class="pillar-num">01</span>
+              <span class="pillar-name">Contentamento</span>
+            </button>
+            <button class="pillar-tab" role="tab" aria-selected="false" data-pillar="1">
+              <span class="pillar-num">02</span>
+              <span class="pillar-name">Conexão</span>
+            </button>
+            <button class="pillar-tab" role="tab" aria-selected="false" data-pillar="2">
+              <span class="pillar-num">03</span>
+              <span class="pillar-name">Pertencimento</span>
+            </button>
+            <button class="pillar-tab" role="tab" aria-selected="false" data-pillar="3">
+              <span class="pillar-num">04</span>
+              <span class="pillar-name">Contribuição</span>
+            </button>
+          </div>
+
+          <div class="pillar-detail-card" id="pillar-detail-card" role="tabpanel">
+            <!-- Populated dynamically by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: BASE CIENTÍFICA -->
+    <section id="ciencia" class="section science-section" data-chapter="4" data-label="05 · Ciência">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="chapter-num">Capítulo IV</span>
+          <h2 class="section-title">Não é apenas filosofia. É ciência.</h2>
+          <p class="section-lead">
+            Décadas de pesquisa em psicologia, neurociência e saúde pública comprovam: o isolamento adoece, o consumo não preenche e a conexão é o maior preditor de longevidade e bem-estar.
+          </p>
+        </div>
+
+        <div class="science-filters reveal" role="group" aria-label="Filtrar estudos por tema">
+          <button class="filter-chip active" data-filter="all">Todos os Estudos</button>
+          <button class="filter-chip" data-filter="conexao">Conexão &amp; Saúde</button>
+          <button class="filter-chip" data-filter="desejo">Ciclo do Desejo</button>
+          <button class="filter-chip" data-filter="doacao">Doação &amp; Partilha</button>
+        </div>
+
+        <div class="science-grid" id="science-grid">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: MOVIMENTO, GRUPOS & PRÁTICA (WARM PAPER SURFACE) -->
+    <section id="movimento" class="section paper-section" data-chapter="5" data-label="06 · Movimento">
+      <div class="container">
+        <div class="section-header dark-ink reveal">
+          <span class="chapter-num">Capítulo V</span>
+          <h2 class="section-title">Do Pensar ao Fazer: Ideias para Transformar a Visão</h2>
+          <p class="section-lead">
+            Não precisamos de dinheiro para criar cultura de encontro. Precisamos de coragem para quebrar o roteiro do isolamento com gestos simples e replicáveis.
+          </p>
+        </div>
+
+        <!-- 6 Movement Formats -->
+        <div class="movement-grid" id="movement-grid">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+        <!-- Interactive Event 1: Gerador de Encontro Espontâneo -->
+        <div class="interactive-lab reveal">
+          <div class="lab-column">
+            <span class="lab-tag">Ferramenta Interativa · Ação Imediata</span>
+            <h3>Gerador de Encontro Espontâneo</h3>
+            <p>
+              Está sem ideia de como quebrar a inércia nesta semana? Sorteie uma micro-ação sem dinheiro,
+              copie o convite pronto e envie para 2 ou 3 pessoas agora mesmo.
+            </p>
+
+            <div class="generator-box" id="generator-box">
+              <div class="generator-result" id="generator-result">
+                <span class="gen-badge" id="gen-badge">Mesa Aberta</span>
+                <h4 id="gen-title">Jantar do "Cada Um Traz o Que Tem"</h4>
+                <p id="gen-desc">
+                  Chame 3 pessoas para cozinhar ou trazer apenas um ingrediente simples na sexta-feira. Regra única: celulares em outra sala.
+                </p>
+                <div class="gen-template" id="gen-template">
+                  "Oi! Estava pensando em quebrar a rotina dessa sexta sem gastar nada. Topa vir aqui em casa fazer uma janta simples com o que a gente já tem na geladeira e jogar conversa fora?"
+                </div>
+              </div>
+              <div class="generator-actions">
+                <button class="btn btn-dark" id="btn-generate-meetup">Sortear Outro Encontro</button>
+                <button class="btn btn-outline-dark" id="btn-copy-invite">Copiar Convite</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Event 2: Baralho de Conversas Reais (3D Tilt Card) -->
+          <div class="lab-column">
+            <span class="lab-tag">Evento na Página · Baralho da Espontaneidade</span>
+            <h3>Cartas para Conversas Sem Fim</h3>
+            <p>
+              Passe o mouse (ou toque) na carta e sorteie perguntas que tiram a conversa do piloto automático
+              ("tudo bem?", "muito trabalho?") e abrem espaço para riso e verdade.
+            </p>
+
+            <div class="deck-stage">
+              <div class="conversation-card" id="conversation-card" tabindex="0" role="button" aria-label="Sortear nova carta de conversa">
+                <div class="card-top">
+                  <span class="card-category" id="card-category">Infância &amp; Leveza</span>
+                  <span class="card-number" id="card-number">01 / 12</span>
+                </div>
+                <blockquote class="card-question" id="card-question">
+                  Qual brincadeira da sua infância você gostaria de fazer hoje se tivesse certeza de que ninguém ia julgar?
+                </blockquote>
+                <div class="card-bottom">
+                  <span>Clique na carta para puxar a próxima</span>
+                  <span class="card-arrow" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Create a Local Collaboration Group -->
+        <div class="guide-block reveal">
+          <div class="guide-header">
+            <span class="lab-tag">Guia Prático · Grupos de Colaboração</span>
+            <h3>Como criar um Núcleo de Conexão no seu bairro ou prédio em 3 passos</h3>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-num">Passo 1</span>
+              <h4>O Convite Sem Filtro</h4>
+              <p>
+                Não espere a casa estar perfeita nem tenha medo de parecer estranho. Comece pequeno: um bilhete no elevador,
+                uma mensagem no grupo do prédio ou um convite direto para 3 colegas que sempre pegam o mesmo caminho que você.
+              </p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">Passo 2</span>
+              <h4>A Regra da Presença (Zero Dinheiro)</h4>
+              <p>
+                Deixe claro desde o início: <strong>não é sobre consumo</strong>. Ninguém precisa pagar nada nem impressionar ninguém.
+                Celulares ficam no silencioso fora da mesa. O único objetivo é estar junto, brincar, cozinhar ou conversar.
+              </p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">Passo 3</span>
+              <h4>O Rito de Continuidade</h4>
+              <p>
+                Antes de se despedirem, combinem a próxima data — mesmo que seja só um café de 30 minutos na praça ou uma
+                troca de carona na quarta-feira. Conexão real nasce da constância leve, não de grandes eventos raros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6: ASSINE O MANIFESTO (PUBLIC PACT) -->
+    <section id="assinar" class="section sign-section" data-chapter="6" data-label="07 · Assinar">
+      <div class="container">
+        <div class="sign-layout">
+          <div class="sign-intro reveal">
+            <span class="chapter-num">Capítulo VI · Pacto Aberto</span>
+            <h2 class="section-title">Assine o Manifesto Novo Mundo</h2>
+            <p class="section-lead">
+              Um manifesto só ganha vida quando sai da tela e vira gesto. Assine com seu nome, sua cidade e escolha
+              um compromisso prático para colocar em prática ainda nesta semana.
+            </p>
+
+            <div class="signature-counter-box">
+              <div class="counter-value" id="signature-count">0</div>
+              <div class="counter-text">
+                <strong>pessoas já assumiram o pacto</strong>
+                <span>Adicione sua assinatura ao círculo</span>
+              </div>
+            </div>
+
+            <form class="sign-form" id="sign-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="signer-name">Seu nome ou apelido</label>
+                  <input type="text" id="signer-name" name="name" placeholder="Ex.: Mariana Silva" required maxlength="60" />
+                </div>
+                <div class="form-field">
+                  <label for="signer-city">Cidade / Bairro</label>
+                  <input type="text" id="signer-city" name="city" placeholder="Ex.: São Paulo, Pinheiros" required maxlength="60" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="signer-pledge">Meu próximo gesto concreto</label>
+                <select id="signer-pledge" name="pledge" required>
+                  <option value="Convidar alguém para dividir uma refeição sem celulares">Convidar alguém para dividir uma refeição sem celulares</option>
+                  <option value="Oferecer 1 hora de escuta ativa e presença real a quem amo">Oferecer 1 hora de escuta ativa e presença real a quem amo</option>
+                  <option value="Criar um encontro semanal de jogos, conversa ou caminhada no bairro">Criar um encontro semanal de jogos, conversa ou caminhada no bairro</option>
+                  <option value="Compartilhar carona ou trajeto com alguém que vai para o mesmo lugar">Compartilhar carona ou trajeto com alguém que vai para o mesmo lugar</option>
+                  <option value="Brincar e dar atenção inteira às crianças da minha vida sem telas">Brincar e dar atenção inteira às crianças da minha vida sem telas</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="signer-note">Uma frase para o mural (opcional)</label>
+                <textarea id="signer-note" name="note" rows="2" placeholder="O que você gostaria de lembrar a quem ler este manifesto?" maxlength="180"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Assinar o Manifesto Agora</button>
+            </form>
+
+            <!-- Personal Shareable Card after signing -->
+            <div class="signed-badge-card" id="signed-badge-card" hidden>
+              <div class="badge-header">
+                <span>Pacto Assinado</span>
+                <strong id="badge-number">#000</strong>
+              </div>
+              <h4 id="badge-name">Nome</h4>
+              <p id="badge-pledge">Compromisso</p>
+              <div class="badge-actions">
+                <button type="button" class="btn btn-ghost btn-sm" id="btn-copy-manifesto-link">Compartilhar Manifesto</button>
+                <button type="button" class="btn btn-ghost btn-sm" id="btn-download-card">Baixar Cartão (SVG)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Public Wall of Signatures -->
+          <div class="sign-wall-wrap reveal">
+            <div class="wall-header">
+              <h3>Mural de Signatários</h3>
+              <span class="wall-note">Assinaturas salvas localmente neste navegador &amp; prontas para backend público</span>
+            </div>
+            <div class="signatures-wall" id="signatures-wall">
+              <!-- Populated dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Manifesto Novo Mundo</strong>
+        <p>Feito para lembrar que felicidade não se compra — se compartilha.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#manifesto">Manifesto</a>
+        <a href="#ciencia">Artigos Científicos</a>
+        <a href="#movimento">Grupos de Colaboração</a>
+        <a href="#assinar">Assinar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
