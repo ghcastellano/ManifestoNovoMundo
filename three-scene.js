@@ -236,7 +236,7 @@ export class Manifesto3DScene {
 
     // Subtle paper fade during Chapter 5 (when light paper section is active)
     const onPaperWeight = clamp(1 - Math.abs(this.scrollProgress - 5) * 1.4, 0, 1);
-    const globalAlpha = lerp(1, 0.28, onPaperWeight);
+    const globalAlpha = lerp(0.58, 0.22, onPaperWeight);
 
     const isMobile = this.width < 768;
     const fov = isMobile ? 310 : 480;
@@ -257,8 +257,8 @@ export class Manifesto3DScene {
       });
 
       ctx.save();
-      ctx.lineWidth = 1.1;
-      ctx.strokeStyle = `rgba(224, 164, 68, ${0.34 * crystalVisibility * globalAlpha})`;
+      ctx.lineWidth = 1.0;
+      ctx.strokeStyle = `rgba(224, 164, 68, ${0.22 * crystalVisibility * globalAlpha})`;
       for (const [i, j] of ICO_EDGES) {
         const a = projectedVerts[i];
         const b = projectedVerts[j];
@@ -288,7 +288,7 @@ export class Manifesto3DScene {
     const maxDist = isMobile ? 76 : 108;
 
     ctx.save();
-    ctx.lineWidth = 0.85;
+    ctx.lineWidth = 0.75;
     for (let i = 0; i < projectedNodes.length; i++) {
       const A = projectedNodes[i];
       for (let j = i + 1; j < projectedNodes.length; j++) {
@@ -297,7 +297,7 @@ export class Manifesto3DScene {
         const dy = A.proj.y - B.proj.y;
         const dist = Math.hypot(dx, dy);
         if (dist < maxDist) {
-          const alpha = (1 - dist / maxDist) * 0.24 * connectionStrength * globalAlpha;
+          const alpha = (1 - dist / maxDist) * 0.15 * connectionStrength * globalAlpha;
           ctx.strokeStyle =
             onPaperWeight > 0.5
               ? `rgba(212, 101, 59, ${alpha})`
@@ -327,14 +327,14 @@ export class Manifesto3DScene {
         if (!proj) continue;
 
         const isActive = p === this.activePillar;
-        const r = (isActive ? 28 : 16) * (proj.scale / 110);
+        const r = (isActive ? 26 : 14) * (proj.scale / 110);
         const grad = ctx.createRadialGradient(proj.x, proj.y, 0, proj.x, proj.y, Math.max(r * 2.2, 8));
         if (isActive) {
-          grad.addColorStop(0, `rgba(224, 164, 68, ${0.85 * pillarVis})`);
-          grad.addColorStop(0.5, `rgba(212, 101, 59, ${0.35 * pillarVis})`);
+          grad.addColorStop(0, `rgba(224, 164, 68, ${0.42 * pillarVis})`);
+          grad.addColorStop(0.5, `rgba(212, 101, 59, ${0.18 * pillarVis})`);
           grad.addColorStop(1, 'rgba(212, 101, 59, 0)');
         } else {
-          grad.addColorStop(0, `rgba(243, 237, 226, ${0.45 * pillarVis})`);
+          grad.addColorStop(0, `rgba(243, 237, 226, ${0.22 * pillarVis})`);
           grad.addColorStop(1, 'rgba(243, 237, 226, 0)');
         }
         ctx.fillStyle = grad;
@@ -346,9 +346,9 @@ export class Manifesto3DScene {
 
     // 5. Render depth-sorted particles
     for (const { node, proj } of projectedNodes) {
-      const depthFade = clamp(1.3 - proj.z / 9, 0.2, 1);
-      const radius = clamp(node.size * (proj.scale / 115), 1.1, 6.5);
-      const alpha = depthFade * 0.85 * globalAlpha;
+      const depthFade = clamp(1.25 - proj.z / 9, 0.16, 0.88);
+      const radius = clamp(node.size * (proj.scale / 120), 1.0, 5.2);
+      const alpha = depthFade * 0.68 * globalAlpha;
 
       let color;
       if (node.hueType === 0) {
@@ -356,7 +356,7 @@ export class Manifesto3DScene {
       } else if (node.hueType === 1) {
         color = `rgba(212, 101, 59, ${alpha})`;
       } else {
-        color = onPaperWeight > 0.5 ? `rgba(92, 131, 103, ${alpha})` : `rgba(243, 237, 226, ${alpha * 0.8})`;
+        color = onPaperWeight > 0.5 ? `rgba(92, 131, 103, ${alpha})` : `rgba(243, 237, 226, ${alpha * 0.72})`;
       }
 
       ctx.fillStyle = color;
