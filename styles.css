@@ -6,7 +6,7 @@
 
 :root {
   --bg-dark: #14110f;
-  --bg-dark-elevated: rgba(30, 25, 22, 0.72);
+  --bg-dark-elevated: rgba(24, 20, 17, 0.85);
   --bg-paper: #f6f2ea;
   --bg-paper-card: #fffdf8;
   --ink-light: #f3ede2;
@@ -396,6 +396,15 @@ main {
 
 .hero-inner {
   max-width: 780px;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at 30% 40%, rgba(20, 17, 15, 0.72), rgba(20, 17, 15, 0.25) 70%, transparent 100%);
+  text-shadow: 0 2px 18px rgba(15, 12, 10, 0.85);
+}
+
+.section:not(.paper-section) .section-header {
+  text-shadow: 0 2px 16px rgba(15, 12, 10, 0.88);
 }
 
 .eyebrow {
